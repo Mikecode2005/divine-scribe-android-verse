@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import FeatureCard from '@/components/FeatureCard';
@@ -5,7 +6,6 @@ import BibleReader from '@/components/BibleReader';
 import AISermon from '@/components/AISermon';
 import BibleQuiz from '@/components/BibleQuiz';
 import Hymns from '@/components/Hymns';
-import TypewriterText from '@/components/TypewriterText';
 import { BookOpen, MessageSquare, Music, BookText, Smartphone } from 'lucide-react';
 
 type ActiveSection = 'home' | 'reader' | 'sermon' | 'hymns' | 'quiz';
@@ -31,7 +31,7 @@ const Index = () => {
               <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto">
                   <div className="flex items-center justify-center mb-8">
-                    <div className="p-4 bg-biblical-gold rounded-full animate-glow">
+                    <div className="p-4 bg-biblical-blue rounded-full animate-glow">
                       <Smartphone className="h-16 w-16 text-white" />
                     </div>
                   </div>
@@ -92,7 +92,7 @@ const Index = () => {
             <section className="py-16">
               <div className="container mx-auto px-4">
                 <div className="glass-effect rounded-2xl p-12 text-center">
-                  <Smartphone className="h-20 w-20 text-biblical-gold mx-auto mb-8 animate-glow" />
+                  <Smartphone className="h-20 w-20 text-biblical-blue mx-auto mb-8 animate-glow" />
                   <h3 className="text-3xl font-serif font-bold text-white mb-6">
                     Optimized for Android
                   </h3>
@@ -103,17 +103,17 @@ const Index = () => {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
                     <div className="text-center">
                       <div className="text-4xl mb-4">⚡</div>
-                      <h4 className="text-xl font-semibold text-biblical-gold mb-2">Fast & Smooth</h4>
+                      <h4 className="text-xl font-semibold text-biblical-blue mb-2">Fast & Smooth</h4>
                       <p className="text-biblical-cream/70">Lightning-fast performance with beautiful animations</p>
                     </div>
                     <div className="text-center">
                       <div className="text-4xl mb-4">🌐</div>
-                      <h4 className="text-xl font-semibold text-biblical-gold mb-2">Multi-Language</h4>
+                      <h4 className="text-xl font-semibold text-biblical-blue mb-2">Multi-Language</h4>
                       <p className="text-biblical-cream/70">Support for multiple languages including original texts</p>
                     </div>
                     <div className="text-center">
                       <div className="text-4xl mb-4">🤖</div>
-                      <h4 className="text-xl font-semibold text-biblical-gold mb-2">AI-Powered</h4>
+                      <h4 className="text-xl font-semibold text-biblical-blue mb-2">AI-Powered</h4>
                       <p className="text-biblical-cream/70">DeepSeek AI integration for sermons and quizzes</p>
                     </div>
                   </div>
@@ -131,7 +131,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-8">
           <button
             onClick={() => setActiveSection('home')}
-            className="mb-6 text-biblical-gold hover:text-biblical-cream transition-colors duration-200 flex items-center space-x-2"
+            className="mb-6 text-biblical-blue hover:text-biblical-cream transition-colors duration-200 flex items-center space-x-2"
           >
             <span>← Back to Home</span>
           </button>

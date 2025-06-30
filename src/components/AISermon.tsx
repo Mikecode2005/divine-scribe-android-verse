@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -6,7 +5,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { MessageSquare, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import TypewriterText from './TypewriterText';
 
 const AISermon = () => {
   const [apiKey, setApiKey] = useState('');
@@ -86,7 +84,7 @@ const AISermon = () => {
   return (
     <div className="space-y-6 animate-fade-in">
       <div className="flex items-center space-x-3 mb-6">
-        <MessageSquare className="h-8 w-8 text-biblical-gold" />
+        <MessageSquare className="h-8 w-8 text-biblical-blue" />
         <h2 className="text-3xl font-serif font-bold text-white">AI Sermon Generator</h2>
       </div>
 
@@ -102,7 +100,7 @@ const AISermon = () => {
               className="bg-white/10 border-white/20 text-white placeholder-white/50"
             />
             <p className="text-biblical-cream/70 text-sm mt-1">
-              Get your free API key from <a href="https://platform.deepseek.com" target="_blank" rel="noopener noreferrer" className="text-biblical-gold hover:underline">DeepSeek Platform</a>
+              Get your free API key from <a href="https://platform.deepseek.com" target="_blank" rel="noopener noreferrer" className="text-biblical-blue hover:underline">DeepSeek Platform</a>
             </p>
           </div>
 
@@ -119,7 +117,7 @@ const AISermon = () => {
           <Button 
             onClick={generateSermon}
             disabled={isLoading}
-            className="w-full gold-gradient text-white hover:shadow-lg"
+            className="w-full blue-gradient text-white hover:shadow-lg"
           >
             {isLoading ? (
               <>
@@ -135,7 +133,7 @@ const AISermon = () => {
 
       {sermon && (
         <Card className="glass-effect border-white/20 p-8">
-          <h3 className="text-2xl font-serif text-biblical-gold mb-6 text-center">Your AI-Generated Sermon</h3>
+          <h3 className="text-2xl font-serif text-biblical-blue mb-6 text-center">Your AI-Generated Sermon</h3>
           <div className="prose prose-invert max-w-none">
             <div className="text-biblical-cream leading-relaxed text-lg font-serif whitespace-pre-wrap">
               {sermon}

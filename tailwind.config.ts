@@ -55,9 +55,9 @@ export default {
 				},
 				biblical: {
 					navy: '#0f172a',
-					gold: '#eab308',
-					cream: '#fef3c7',
-					purple: '#581c87',
+					blue: '#3b82f6',
+					cream: '#f8fafc',
+					purple: '#7c3aed',
 					lightBlue: '#e0f2fe'
 				}
 			},
@@ -105,10 +105,10 @@ export default {
 				},
 				'glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px rgba(234, 179, 8, 0.4)'
+						boxShadow: '0 0 20px rgba(59, 130, 246, 0.4)'
 					},
 					'50%': {
-						boxShadow: '0 0 30px rgba(234, 179, 8, 0.7)'
+						boxShadow: '0 0 30px rgba(59, 130, 246, 0.7)'
 					}
 				}
 			},

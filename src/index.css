@@ -67,10 +67,10 @@
   }
   
   .biblical-gradient {
-    background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #1e40af 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #7c3aed 50%, #3b82f6 100%);
   }
   
-  .gold-gradient {
-    background: linear-gradient(135deg, #eab308 0%, #ca8a04 50%, #a16207 100%);
+  .blue-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e40af 100%);
   }
 }

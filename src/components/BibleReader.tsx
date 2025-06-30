@@ -1,9 +1,9 @@
+
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
 import { BookOpen, Languages } from 'lucide-react';
-import TypewriterText from './TypewriterText';
 
 const BibleReader = () => {
   const [selectedVersion, setSelectedVersion] = useState('KJV');
@@ -33,14 +33,14 @@ const BibleReader = () => {
   return (
     <div className="space-y-6 animate-fade-in">
       <div className="flex items-center space-x-3 mb-6">
-        <BookOpen className="h-8 w-8 text-biblical-gold" />
+        <BookOpen className="h-8 w-8 text-biblical-blue" />
         <h2 className="text-3xl font-serif font-bold text-white">Bible Reader</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
         <Card className="glass-effect border-white/20 p-4">
           <div className="flex items-center space-x-2 mb-2">
-            <BookOpen className="h-5 w-5 text-biblical-gold" />
+            <BookOpen className="h-5 w-5 text-biblical-blue" />
             <label className="text-white font-medium">Version</label>
           </div>
           <Select value={selectedVersion} onValueChange={setSelectedVersion}>
@@ -59,7 +59,7 @@ const BibleReader = () => {
 
         <Card className="glass-effect border-white/20 p-4">
           <div className="flex items-center space-x-2 mb-2">
-            <Languages className="h-5 w-5 text-biblical-gold" />
+            <Languages className="h-5 w-5 text-biblical-blue" />
             <label className="text-white font-medium">Language</label>
           </div>
           <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
@@ -79,7 +79,7 @@ const BibleReader = () => {
 
       <Card className="glass-effect border-white/20 p-8">
         <div className="text-center mb-6">
-          <h3 className="text-2xl font-serif text-biblical-gold mb-2">
+          <h3 className="text-2xl font-serif text-biblical-blue mb-2">
             {currentVerse.book} {currentVerse.chapter}:{currentVerse.verse}
           </h3>
           <div className="text-lg text-biblical-cream leading-relaxed font-serif">
@@ -99,7 +99,7 @@ const BibleReader = () => {
           <Button variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
             Previous
           </Button>
-          <Button className="gold-gradient text-white hover:shadow-lg">
+          <Button className="blue-gradient text-white hover:shadow-lg">
             Next Verse
           </Button>
         </div>

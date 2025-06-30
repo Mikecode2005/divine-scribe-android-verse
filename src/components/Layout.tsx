@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3 animate-fade-in">
-              <div className="p-2 bg-biblical-gold rounded-lg animate-glow">
+              <div className="p-2 bg-biblical-blue rounded-lg animate-glow">
                 <Book className="h-8 w-8 text-white" />
               </div>
               <div>

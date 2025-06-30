@@ -17,8 +17,8 @@ const FeatureCard = ({ icon: Icon, title, description, onClick, className = '' }
       onClick={onClick}
     >
       <div className="flex flex-col items-center text-center space-y-4">
-        <div className="p-4 bg-biblical-gold/20 rounded-full group-hover:bg-biblical-gold/30 transition-colors duration-300">
-          <Icon className="h-8 w-8 text-biblical-gold" />
+        <div className="p-4 bg-biblical-blue/20 rounded-full group-hover:bg-biblical-blue/30 transition-colors duration-300">
+          <Icon className="h-8 w-8 text-biblical-blue" />
         </div>
         <h3 className="text-xl font-serif font-semibold text-white">{title}</h3>
         <p className="text-biblical-cream/80 leading-relaxed">{description}</p>
