@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import FeatureCard from '@/components/FeatureCard';
@@ -7,7 +6,7 @@ import AISermon from '@/components/AISermon';
 import BibleQuiz from '@/components/BibleQuiz';
 import Hymns from '@/components/Hymns';
 import TypewriterText from '@/components/TypewriterText';
-import { BookOpen, MessageSquare, Music, BookText, Android } from 'lucide-react';
+import { BookOpen, MessageSquare, Music, BookText, Smartphone } from 'lucide-react';
 
 type ActiveSection = 'home' | 'reader' | 'sermon' | 'hymns' | 'quiz';
 
@@ -33,7 +32,7 @@ const Index = () => {
                 <div className="max-w-4xl mx-auto">
                   <div className="flex items-center justify-center mb-8">
                     <div className="p-4 bg-biblical-gold rounded-full animate-glow">
-                      <Android className="h-16 w-16 text-white" />
+                      <Smartphone className="h-16 w-16 text-white" />
                     </div>
                   </div>
                   <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-6 animate-fade-in">
@@ -96,7 +95,7 @@ const Index = () => {
             <section className="py-16">
               <div className="container mx-auto px-4">
                 <div className="glass-effect rounded-2xl p-12 text-center">
-                  <Android className="h-20 w-20 text-biblical-gold mx-auto mb-8 animate-glow" />
+                  <Smartphone className="h-20 w-20 text-biblical-gold mx-auto mb-8 animate-glow" />
                   <h3 className="text-3xl font-serif font-bold text-white mb-6">
                     Optimized for Android
                   </h3>

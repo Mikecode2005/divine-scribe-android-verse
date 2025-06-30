@@ -1,9 +1,8 @@
-
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Language } from 'lucide-react';
+import { BookOpen, Languages } from 'lucide-react';
 import TypewriterText from './TypewriterText';
 
 const BibleReader = () => {
@@ -60,7 +59,7 @@ const BibleReader = () => {
 
         <Card className="glass-effect border-white/20 p-4">
           <div className="flex items-center space-x-2 mb-2">
-            <Language className="h-5 w-5 text-biblical-gold" />
+            <Languages className="h-5 w-5 text-biblical-gold" />
             <label className="text-white font-medium">Language</label>
           </div>
           <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
