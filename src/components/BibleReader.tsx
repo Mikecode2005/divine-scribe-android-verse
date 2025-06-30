@@ -47,7 +47,7 @@ const BibleReader = () => {
             <SelectTrigger className="bg-white/10 border-white/20 text-white">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent className="bg-biblical-navy border-white/20">
+            <SelectContent className="bg-slate-800 border-white/20">
               {versions.map((version) => (
                 <SelectItem key={version.value} value={version.value} className="text-white hover:bg-white/10">
                   {version.label}
@@ -66,7 +66,7 @@ const BibleReader = () => {
             <SelectTrigger className="bg-white/10 border-white/20 text-white">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent className="bg-biblical-navy border-white/20">
+            <SelectContent className="bg-slate-800 border-white/20">
               {languages.map((language) => (
                 <SelectItem key={language.value} value={language.value} className="text-white hover:bg-white/10">
                   {language.label}
@@ -84,15 +84,13 @@ const BibleReader = () => {
           </h3>
           <div className="text-lg text-biblical-cream leading-relaxed font-serif">
             {selectedLanguage === 'Greek' ? (
-              <TypewriterText 
-                text="οὕτως γὰρ ἠγάπησεν ὁ θεὸς τὸν κόσμον, ὥστε τὸν υἱὸν τὸν μονογενῆ ἔδωκεν" 
-                className="text-xl"
-              />
+              <p className="text-xl">
+                οὕτως γὰρ ἠγάπησεν ὁ θεὸς τὸν κόσμον, ὥστε τὸν υἱὸν τὸν μονογενῆ ἔδωκεν
+              </p>
             ) : (
-              <TypewriterText 
-                text={currentVerse.text} 
-                className="text-xl"
-              />
+              <p className="text-xl">
+                {currentVerse.text}
+              </p>
             )}
           </div>
         </div>

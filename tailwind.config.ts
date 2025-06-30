@@ -54,10 +54,11 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				biblical: {
-					navy: '#1e3a8a',
-					gold: '#f59e0b',
-					cream: '#fefce8',
-					parchment: '#fef7cd'
+					navy: '#0f172a',
+					gold: '#eab308',
+					cream: '#fef3c7',
+					purple: '#581c87',
+					lightBlue: '#e0f2fe'
 				}
 			},
 			borderRadius: {
@@ -102,28 +103,12 @@ export default {
 						transform: 'translateX(0)'
 					}
 				},
-				'typewriter': {
-					'0%': {
-						width: '0'
-					},
-					'100%': {
-						width: '100%'
-					}
-				},
-				'blink': {
-					'0%, 50%': {
-						opacity: '1'
-					},
-					'51%, 100%': {
-						opacity: '0'
-					}
-				},
 				'glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px rgba(245, 158, 11, 0.3)'
+						boxShadow: '0 0 20px rgba(234, 179, 8, 0.4)'
 					},
 					'50%': {
-						boxShadow: '0 0 30px rgba(245, 158, 11, 0.6)'
+						boxShadow: '0 0 30px rgba(234, 179, 8, 0.7)'
 					}
 				}
 			},
@@ -132,8 +117,6 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-in-right': 'slide-in-right 0.8s ease-out',
-				'typewriter': 'typewriter 3s steps(40) 1s 1 normal both',
-				'blink': 'blink 1s infinite',
 				'glow': 'glow 2s ease-in-out infinite alternate'
 			},
 			fontFamily: {

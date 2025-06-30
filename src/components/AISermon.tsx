@@ -101,7 +101,7 @@ const AISermon = () => {
               onChange={(e) => setApiKey(e.target.value)}
               className="bg-white/10 border-white/20 text-white placeholder-white/50"
             />
-            <p className="text-biblical-cream/60 text-sm mt-1">
+            <p className="text-biblical-cream/70 text-sm mt-1">
               Get your free API key from <a href="https://platform.deepseek.com" target="_blank" rel="noopener noreferrer" className="text-biblical-gold hover:underline">DeepSeek Platform</a>
             </p>
           </div>
@@ -137,8 +137,8 @@ const AISermon = () => {
         <Card className="glass-effect border-white/20 p-8">
           <h3 className="text-2xl font-serif text-biblical-gold mb-6 text-center">Your AI-Generated Sermon</h3>
           <div className="prose prose-invert max-w-none">
-            <div className="text-biblical-cream leading-relaxed text-lg font-serif">
-              <TypewriterText text={sermon} delay={30} />
+            <div className="text-biblical-cream leading-relaxed text-lg font-serif whitespace-pre-wrap">
+              {sermon}
             </div>
           </div>
         </Card>

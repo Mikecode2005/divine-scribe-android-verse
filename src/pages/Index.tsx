@@ -36,15 +36,12 @@ const Index = () => {
                     </div>
                   </div>
                   <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-6 animate-fade-in">
-                    <TypewriterText text="Divine Scribe" className="text-6xl md:text-8xl" />
+                    Divine Scribe
                   </h1>
                   <div className="text-xl md:text-2xl text-biblical-cream/90 mb-8 font-serif animate-slide-in-right">
-                    <TypewriterText 
-                      text="Your AI-Powered Bible Study Companion for Android" 
-                      delay={40}
-                    />
+                    Your AI-Powered Bible Study Companion for Android
                   </div>
-                  <p className="text-lg text-biblical-cream/70 max-w-2xl mx-auto animate-fade-in">
+                  <p className="text-lg text-biblical-cream/80 max-w-2xl mx-auto animate-fade-in">
                     Explore God's Word with multiple translations, AI-generated sermons, 
                     beautiful hymns, and interactive quizzes - all optimized for your mobile experience.
                   </p>
