@@ -1,73 +1,121 @@
-# Welcome to your Lovable project
+# Intelligensia App
 
-## Project info
+Intelligensia is a comprehensive educational platform designed to connect students, tutors, and educational institutions. The platform enables students to join virtual classrooms, apply for scholarships and internships, form study groups, and collaborate with peers.
 
-**URL**: https://lovable.dev/projects/584a169f-4b9d-4bc1-965c-30ebe5ee755f
+## Features
 
-## How can I edit this code?
+- **Authentication System**: Secure login and signup with email/password and Google OAuth
+- **User Profiles**: Personalized profiles with field selection and performance tracking
+- **Dashboard**: Performance metrics, recent activity, and recommended content
+- **Scholarships**: Browse and apply for scholarships matching your profile
+- **Internships**: Discover and apply for internships in your field
+- **Classrooms**: Join virtual classrooms with join codes or create your own
+- **Study Groups**: Form study groups with peers sharing similar interests
+- **Responsive Design**: Modern UI that works across devices
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Frontend**: Next.js 15, React 19, TailwindCSS 4
+- **Backend**: Next.js API routes, Server Actions
+- **Database**: PostgreSQL with Prisma ORM
+- **Authentication**: Lucia Auth with Prisma adapter
+- **UI Components**: Shadcn UI
+- **Styling**: TailwindCSS with custom orange theme
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/584a169f-4b9d-4bc1-965c-30ebe5ee755f) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js 18+ and npm
+- PostgreSQL database
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mikecode2005/intelligensia-app.git
+   cd intelligensia-app
+   ```
 
-Follow these steps:
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3. Set up environment variables:
+   Create a `.env` file in the root directory with the following variables:
+   ```
+   # Database
+   DATABASE_URL="postgresql://username:password@localhost:5432/intelligensia"
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+   # Authentication
+   AUTH_SECRET="your-secure-random-string"
 
-# Step 3: Install the necessary dependencies.
-npm i
+   # Google OAuth
+   GOOGLE_CLIENT_ID="your-google-client-id"
+   GOOGLE_CLIENT_SECRET="your-google-client-secret"
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+   # Stream Chat (for messaging)
+   NEXT_PUBLIC_STREAM_KEY="your-stream-key"
+   STREAM_SECRET="your-stream-secret"
+   ```
 
-**Edit a file directly in GitHub**
+4. Set up the database:
+   ```bash
+   # Generate Prisma client
+   npx prisma generate
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+   # Run migrations
+   npx prisma migrate dev --name init
+   ```
 
-**Use GitHub Codespaces**
+5. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+6. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-## What technologies are used for this project?
+## Project Structure
 
-This project is built with:
+- `/src/app` - Next.js app router pages and layouts
+- `/src/app/(auth)` - Authentication pages (login, signup)
+- `/src/app/(dashboard)` - Dashboard and feature pages
+- `/src/components` - Reusable UI components
+- `/src/lib` - Utility functions and shared code
+- `/prisma` - Database schema and migrations
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Authentication Flow
 
-## How can I deploy this project?
+1. **Email/Password Authentication**:
+   - Users can sign up with email, username, and password
+   - Password is hashed using Argon2
+   - Sessions are managed by Lucia Auth
 
-Simply open [Lovable](https://lovable.dev/projects/584a169f-4b9d-4bc1-965c-30ebe5ee755f) and click on Share -> Publish.
+2. **Google OAuth**:
+   - Users can sign in with their Google account
+   - OAuth flow is handled by Arctic and Lucia Auth
 
-## Can I connect a custom domain to my Lovable project?
+## Database Schema
 
-Yes, you can!
+The database schema includes models for:
+- Users (students, tutors, organizations)
+- Sessions
+- Fields of study
+- Performance metrics
+- Classrooms and classroom members
+- Study groups
+- Scholarships and applications
+- Internships and applications
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Contributing
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
